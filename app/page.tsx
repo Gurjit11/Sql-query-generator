@@ -75,7 +75,7 @@ export default function Home() {
       </div>
 
       <div className=" group flex-col text-3xl sm:py-40 font-bold flex place-items-center before:absolute sm:before:h-[300px] sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 sm:after:h-[180px] sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <div>Generate SQL queries using AI</div>
+        <div>Generate SQL queries using the Power of AI</div>
         <div className="animate-bounce pt-8">
           <div className="inline-block   rotate-90 transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
             -&gt;
@@ -102,21 +102,50 @@ export default function Home() {
         </span>
       </div>
       <div className="pt-[400px] sm:block hidden"></div>
-      <div className="w-screen sm:w-full px-3 sm:mt-60 bg-transparent z-10">
+      <div className="z-10 hidden sm:mt-60 bg-black w-screen overflow-clip sm:text-3xl text-xl font-extrabold h-[110px] sm:flex flex-col justify-center items-center ">
+        <span className="flex">
+          Also try our{" "}
+          <span className="bg-gradient-to-br ml-2 from-yellow-300 to-green-400 bg-clip-text text-transparent">
+            <a href="#tool">SQL Visualizer Tool</a>
+          </span>
+        </span>
+        <span className="text-sm  font-semibold mt-2">
+          Simple Tool to Create SQL queries Visually
+        </span>
+        <span className="text-sm font-extralight mt-2">
+          See the demo video below
+        </span>
+      </div>
+      <div className="absolute sm:top-[1340px] top-[-600px] overflow-clip flex justify-center w-screen z-5">
+        <span className="border-[0.1px] border-gray-800 mb-40 shadow-gray-900 shadow-[0_15px_100px_15px_rgba(0,0,0,0.1)] rounded-2xl">
+          <ReactPlayer
+            width="530px"
+            height="600px"
+            url="https://res.cloudinary.com/dtzaypqns/video/upload/v1690982950/video/vj80flu3dmksz9udecnd.mp4"
+            playing
+            playbackRate={2}
+            loop
+            muted
+          />
+        </span>
+      </div>
+      <div className="pt-[600px] sm:block hidden"></div>
+      <div className="w-screen sm:w-full px-3 sm:mt-0 mt-40  bg-transparent z-10">
         <ListMessage userMessages={userMessages} />
       </div>
 
       <div className="py-3 pt-8 lg:px-32 w-full">
         <input
+          style={{ background: "black" }}
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Enter your Query..."
-          className="text-white w-full p-2 bg-transparent  border-b-2 outline-none border-gray-400"
+          className=" text-white w-full p-2 bg-black  border-b-2 outline-none border-gray-400"
         />
       </div>
       <Code output={aiMessage?.content || ""} loading={loading} />
 
-      <div className="mb-32 mt-10 flex gap-3">
+      <div className="mb-32 mt-10 flex gap-3" id="tool">
         <div
           className="group  rounded-lg border border-transparent px-6 pt-2 bg-gradient-to-br from-blue-950 to-purple-950 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
           rel="noopener noreferrer"
