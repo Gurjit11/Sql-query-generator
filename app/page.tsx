@@ -82,13 +82,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="z-10 hidden mt-32 bg-black w-screen overflow-clip sm:text-2xl text-xl font-extrabold h-[110px] sm:flex flex-col justify-center items-center ">
+      <div className="z-10 hidden mt-16 bg-black w-screen overflow-clip sm:text-2xl text-xl font-extrabold h-[110px] sm:flex flex-col justify-center items-center ">
         Create SQL Queries in a Single Click<br></br>
         <span className="text-sm font-extralight mt-2">
           See the demo video below
         </span>
       </div>
-      <div className="absolute sm:top-[670px] top-[-600px] overflow-clip flex justify-center w-screen z-5">
+      <div className="absolute sm:top-[590px] top-[-600px] overflow-clip flex justify-center w-screen z-5">
         <span className="border-[0.1px] border-gray-800 mb-40 shadow-gray-900 shadow-[0_15px_100px_15px_rgba(0,0,0,0.1)] rounded-2xl">
           <ReactPlayer
             width="530px"
@@ -152,7 +152,7 @@ export default function Home() {
           </p> */}
         </div>
       </div>
-      {/* <SQLvisualizer /> */}
+      <SQLvisualizer />
     </main>
   );
 }
