@@ -4,6 +4,7 @@ import ListMessage from "@/components/ListMessage";
 import Image from "next/image";
 import { useState } from "react";
 import ReactPlayer from "react-player";
+// import SQLvisualizer from "@/components/SQLvisualizer";
 
 interface ChatData {
   role: string;
@@ -91,7 +92,7 @@ export default function Home() {
         <ReactPlayer
           width="530px"
           height="600px"
-          url="https://youtube.com/shorts/q1rgmSIzuqw?feature=share"
+          url="https://res.cloudinary.com/dtzaypqns/video/upload/v1690962342/video/yajhkeho0iip9iol9gu7.mp4"
           playing
           playbackRate={2}
           loop
@@ -149,6 +150,7 @@ export default function Home() {
           </p> */}
         </div>
       </div>
+      {/* <SQLvisualizer /> */}
     </main>
   );
 }
