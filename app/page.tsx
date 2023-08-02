@@ -4,7 +4,7 @@ import ListMessage from "@/components/ListMessage";
 import Image from "next/image";
 import { useState } from "react";
 import ReactPlayer from "react-player";
-// import SQLvisualizer from "@/components/SQLvisualizer";
+import SQLvisualizer from "@/components/SQLvisualizer";
 
 interface ChatData {
   role: string;
@@ -82,25 +82,27 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="z-10 hidden bg-black w-screen overflow-clip sm:text-2xl text-xl font-extrabold h-[110px] sm:flex flex-col justify-center items-center ">
-        Create Queries in a single Click<br></br>
+      <div className="z-10 hidden mt-32 bg-black w-screen overflow-clip sm:text-2xl text-xl font-extrabold h-[110px] sm:flex flex-col justify-center items-center ">
+        Create SQL Queries in a Single Click<br></br>
         <span className="text-sm font-extralight mt-2">
           See the demo video below
         </span>
       </div>
-      <div className="absolute sm:top-[550px] top-[-500px] overflow-clip flex justify-center w-screen z-5">
-        <ReactPlayer
-          width="530px"
-          height="600px"
-          url="https://res.cloudinary.com/dtzaypqns/video/upload/v1690962342/video/yajhkeho0iip9iol9gu7.mp4"
-          playing
-          playbackRate={2}
-          loop
-          muted
-        />
+      <div className="absolute sm:top-[670px] top-[-600px] overflow-clip flex justify-center w-screen z-5">
+        <span className="border-[0.1px] border-gray-800 mb-40 shadow-gray-900 shadow-[0_15px_100px_15px_rgba(0,0,0,0.1)] rounded-2xl">
+          <ReactPlayer
+            width="530px"
+            height="600px"
+            url="https://res.cloudinary.com/dtzaypqns/video/upload/v1690962342/video/yajhkeho0iip9iol9gu7.mp4"
+            playing
+            playbackRate={2}
+            loop
+            muted
+          />
+        </span>
       </div>
       <div className="pt-[400px] sm:block hidden"></div>
-      <div className="w-screen sm:w-full px-3 sm:bg-transparent bg-black z-10">
+      <div className="w-screen sm:w-full px-3 sm:mt-60 bg-transparent z-10">
         <ListMessage userMessages={userMessages} />
       </div>
 
